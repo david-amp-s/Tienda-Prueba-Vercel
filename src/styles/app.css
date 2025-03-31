@@ -69,3 +69,23 @@
 .boton-compra:hover {
   background-color: #0097a7;
 }
+
+
+.contenedor_limpieza{
+  border: solid #fff 4px;
+  height: 200px; 
+  width: 95%;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contenedor_icon_button{
+  width: 80px;
+  height: 80px;
+}
+
+.contenedor_icon_button img{
+  width: 70%;
+}
