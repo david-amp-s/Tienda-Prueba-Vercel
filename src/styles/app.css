@@ -33,7 +33,6 @@
   align-items: baseline;
   margin: 20px;
   justify-content: center;
-  overflow: visible;
 }
 
 /* Limpieza */
@@ -46,8 +45,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
+}
+.slider{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
 .contenedor_icon_button{
   width: 68px;
   margin: 10px;
