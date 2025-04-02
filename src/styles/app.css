@@ -76,6 +76,7 @@
   padding: 15px;
   border-radius: 20px;
   margin: 10px;
+  position: relative;
 }
 .card-item  img{
   width: 100px;
@@ -84,3 +85,37 @@
   border: solid #000 3px;
 }
 /* fin limpieza */
+
+.card-contenido:hover{
+  opacity: 0;
+}
+.card-item:hover {
+  background-color: #000;
+
+}
+
+.bton_card {
+  position: absolute;
+  bottom: 10px;  /* Coloca los botones en la parte inferior */
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.bton_card.buy {
+  bottom: 70%; /* Ajusta la posición del primer botón */
+  background-color: #076904;
+}
+.bton_card.info{
+  background-color: #1163ce;
+  bottom: 25%;
+}
+.card-item:hover .bton_card {
+  opacity: 1;
+}
