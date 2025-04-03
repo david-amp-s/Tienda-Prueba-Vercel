@@ -14,8 +14,6 @@ function App() {
             <SliderLimpieza/>
           </div>
       </div>
-
-      <ModalCarrito/>
     </>
   )
 }

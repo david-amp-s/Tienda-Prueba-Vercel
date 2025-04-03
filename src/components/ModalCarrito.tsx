@@ -1,10 +1,13 @@
-const ModalCarrito = () =>{
+interface ModalProps{
+    onClose: ()=>void;
+}
+const ModalCarrito = ({onClose}: ModalProps) =>{
     return(
         <div className="modal">
             
             <div className="contenedor_carrito">
             <div className="header_namePet">PARKPLACE <img  className="header_pet" src="src/assets/icons/pet.png" alt="pet" /></div>
-            <button className="btn_tienda"><img className="header_carrito" src="src/assets/icons/x.png" alt="" /></button>
+            <button className="btn_tienda" onClick={onClose}><img className="header_carrito" src="src/assets/icons/x.png" alt="" /></button>
             </div>
             <div className="overlay_carrito">
             <h2>Carrito</h2>

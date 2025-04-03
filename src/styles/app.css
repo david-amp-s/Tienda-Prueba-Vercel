@@ -52,6 +52,7 @@
   background: linear-gradient(135deg, #0D0D2B, #4B0082);
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 .carrito_compras{
   overflow: auto; 
