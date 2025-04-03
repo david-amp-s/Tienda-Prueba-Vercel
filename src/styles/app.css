@@ -13,7 +13,7 @@
 .contenedor_petcar{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 80%;
 }
 
@@ -43,14 +43,72 @@
 /*Modal carrito*/
 .modal{
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) ;
+  width: 90%;
+  height: 90%;
   background: #000;
+  background: linear-gradient(135deg, #0D0D2B, #4B0082);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+.carrito_compras{
+  overflow: auto; 
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+.contenedor_carrito{
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+  width: 90%;
+  margin-top: 20px;
+
+}
+
+.overlay_carrito{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+.card_modal{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img_producto{
+  width: 250px;
+  height: 200px;
+  background-color: #fff;
+}
+
+.contenedor_pago{
+  border: solid #fff 2px;
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+  padding: 20px;
+}
+
+.total_valor_carrito{
+  border: solid #fff 2px;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton_pagar{
+  width: 100px;
+  height: 80px;
 }
 /* Fin modal*/
 /* productos */ 
