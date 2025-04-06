@@ -27,7 +27,7 @@ const ModalCarrito = ({ onClose }: ModalProps) => {
         {carrito.map((producto, index) => (
           <div key={index} className="card_modal">
             <div className="img_producto">
-              <img src={producto.url} alt={producto.nombre} />
+              <img className="img_carrito" src={producto.url} alt={producto.nombre} />
             </div>
             <p>{producto.nombre}</p>
             <p>{new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP" }).format(producto.precio)}</p>
@@ -38,7 +38,15 @@ const ModalCarrito = ({ onClose }: ModalProps) => {
           <div className="total_valor_carrito">
             {new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP" }).format(total)}
           </div>
-          <button className="boton_pagar">Pagar</button>
+          <button
+  className="boton_pagar"
+  onClick={() => {
+    alert("Pago realizado con exito total: " + total);  // Muestra el mensaje de pago
+    localStorage.clear();  // Limpia el localStorage
+  }}
+>
+  Pagar
+</button>
         </div>
       </div>
     </div>

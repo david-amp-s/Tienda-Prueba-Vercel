@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "vantage";
+  src: url("../assets/fonts/vantage.ttf");
+}
+:root{
+  --fuente-especial: 'vantage';
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #fff;
+  font-family: sans-serif;
 }
 
 body {

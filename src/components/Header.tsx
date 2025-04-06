@@ -9,9 +9,11 @@ const Header = () =>{
             <div className="header_namePet">PARKPLACE <img  className="header_pet" src="src/assets/icons/pet.png" alt="pet" /></div>
             <button className="btn_tienda" onClick={()=>setIsOpen(true)}><img className="header_carrito" src="src/assets/icons/shopping.png" alt="" /></button>
             </div>
-            <div className="overlay"></div>
+            <div className="overlay">
             <h2>Tienda</h2>
-            <div className="info_productos">Aca una pequeña socializacion de los productos</div>
+            </div>
+            
+            <div className="info_productos">Explora nuestros productos y mejora la experiencia de tu vehículo 🚗✨  </div>
             {isOpen && <ModalCarrito onClose={() => setIsOpen(false)} />}
         </div>
     );

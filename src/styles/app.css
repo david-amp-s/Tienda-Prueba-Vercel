@@ -14,30 +14,81 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 80%;
+  width: 90%;
+}
+.header_namePet{
+  font-family: var(--fuente-especial);
+  font-size: 20px;
 }
 
 .header_pet{
-  width: 50px;
-  filter: invert(100%);
+  width: 45px;
+  filter: invert(100%); 
+  margin-left: 8px;
 }
 .btn_tienda{
   background-color: transparent;
   border: none;
 }
 .header_carrito{
-  width: 90px;
+  width: 55px;
   filter: invert(100%);
 }
-.info_productos{
-  width: 600px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid 2px #fff;
-  margin: 20px;
+.header_carrito:hover{
+  scale: 1.2;
 }
+
+.overlay{
+  margin: 15px;
+}
+
+.overlay h2 {
+  font-family: 'Montserrat', sans-serif; /* o tu fuente especial si tienes otra */
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 10px;
+  position: relative;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.overlay h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: white;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.info_productos {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.info_productos:hover {
+  transform: translateY(-3px);
+}
+
 
 /* fin header */
 /*Modal carrito*/
@@ -85,11 +136,13 @@
 }
 
 .img_producto{
-  width: 250px;
+  width: 150px;
   height: 200px;
   background-color: #fff;
 }
-
+.img_carrito{
+  width: 100%;
+}
 .contenedor_pago{
   border: solid #fff 2px;
   display: flex;
