@@ -27,7 +27,6 @@ const Card = ({ nombre, precio, url, descripcion }: CardProps) => {
         <p className="producto_precio">{precioFormateado}</p>
       </div>
       <button className="bton_card buy" onClick={agregarAlCarrito}>BUY</button>
-      <button className="bton_card info">INFO</button>
     </div>
   );
 };

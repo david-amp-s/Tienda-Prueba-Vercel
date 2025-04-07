@@ -227,6 +227,28 @@
   border-radius: 20px;
   border: solid #000 3px;
 }
+
+.contenedor_decorativo {
+  border: solid #FFD700 4px; /* dorado */
+  height: 250px;
+  width: 95%;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #1a1a2e, #16213e); /* fondo decorativo */
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-item {
+  background-color: rgba(255, 255, 255, 0.15); /* un poco más brillante */
+}
+
 /* fin limpieza */
 
 .card-contenido:hover{
@@ -255,10 +277,7 @@
   bottom: 70%; /* Ajusta la posición del primer botón */
   background-color: #076904;
 }
-.bton_card.info{
-  background-color: #1163ce;
-  bottom: 25%;
-}
+
 .card-item:hover .bton_card {
   opacity: 1;
 }
