@@ -1,5 +1,4 @@
 import Header from './components/Header'
-import ModalCarrito from './components/ModalCarrito'
 import SliderLimpieza from './components/SliderLimpieza'
 import SliderDecorativo from './components/sliderProductos'
 import './styles/app.css' 

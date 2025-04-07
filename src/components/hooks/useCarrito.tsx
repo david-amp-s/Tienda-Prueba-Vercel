@@ -14,22 +14,35 @@ export function useCarrito() {
   const [carrito, setCarrito] = useState<ProductoCarrito[]>([]);
 
   useEffect(() => {
-    const stored = localStorage.getItem(CARRITO_KEY);
-    if (stored) {
-      setCarrito(JSON.parse(stored));
+    try {
+      const stored = localStorage.getItem(CARRITO_KEY);
+      if (stored) {
+        setCarrito(JSON.parse(stored));
+      }
+    } catch (error) {
+      console.error("Error al leer el carrito del localStorage:", error);
+      setCarrito([]);
     }
   }, []);
+  
 
   const guardarCarrito = (nuevoCarrito: ProductoCarrito[]) => {
-    setCarrito(nuevoCarrito);
-    localStorage.setItem(CARRITO_KEY, JSON.stringify(nuevoCarrito));
+    setCarrito(() => {
+      localStorage.setItem(CARRITO_KEY, JSON.stringify(nuevoCarrito));
+      return nuevoCarrito;
+    });
   };
+  
 
   const agregarProducto = (producto: ProductoCarrito) => {
-    const nuevoCarrito = [...carrito, producto];
-    guardarCarrito(nuevoCarrito);
+    setCarrito((prevCarrito) => {
+      const nuevoCarrito = [...prevCarrito, producto];
+      localStorage.setItem(CARRITO_KEY, JSON.stringify(nuevoCarrito));
+      return nuevoCarrito;
+    });
   };
-
+  
+  
   const limpiarCarrito = () => {
     guardarCarrito([]);
   };

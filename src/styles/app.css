@@ -147,6 +147,7 @@
   border: solid #fff 2px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   height: 200px;
   padding: 20px;
 }
@@ -162,15 +163,16 @@
 
 .boton_pagar{
   width: 100px;
-  height: 80px;
+  height: 78px;
+  background-color: #0D0D2B;
+  border-radius: 8px;
 }
 /* Fin modal*/
 /* productos */ 
 
 .contenedor_productos{
-  border: solid #fff 4px;
   width: 92%;
-  height: 60%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -181,7 +183,6 @@
 /* Limpieza */
 
 .contenedor_limpieza{
-  border: solid #fff 4px;
   height: 250px; 
   width: 95%;
   margin: 20px;
@@ -214,29 +215,38 @@
 
 .card-item {
   width: 200px;
-  height: 200px;
+  height: 230px;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 20px;
   margin: 10px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card-item  img{
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 20px;
   border: solid #000 3px;
 }
 
+.producto_nombre{
+  font-size: 22px;
+  margin-top: 8px;
+}
+.producto_precio{
+  font-size: 18px;
+  margin-top: 12px;
+}
 .contenedor_decorativo {
-  border: solid #FFD700 4px; /* dorado */
   height: 250px;
   width: 95%;
   margin: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right, #1a1a2e, #16213e); /* fondo decorativo */
 }
 
 .slider {
@@ -251,7 +261,9 @@
 
 /* fin limpieza */
 
-.card-contenido:hover{
+.card-item:hover img,
+.card-item:hover .producto_precio,
+.card-item:hover .producto_nombre {
   opacity: 0;
 }
 .card-item:hover {
@@ -274,8 +286,10 @@
 }
 
 .bton_card.buy {
-  bottom: 70%; /* Ajusta la posición del primer botón */
+  bottom: 30%; /* Ajusta la posición del primer botón */
   background-color: #076904;
+  width: 90px;
+  height: 70px;
 }
 
 .card-item:hover .bton_card {
