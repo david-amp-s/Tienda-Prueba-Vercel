@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import Card from "./Card"; // Puedes reutilizar la misma Card
+import { decorativo } from "../data/products";
 
 const SliderDecorativo = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
@@ -23,17 +24,16 @@ const SliderDecorativo = () => {
             </button>
 
             <div className="slider" ref={sliderRef}>
-                {[...Array(8)].map((_, index) => (
+                {decorativo.map(producto => (
                     <Card
-                        key={index}
-                        nombre="Producto Decorativo"
-                        precio={12000}
-                        url="src/assets/img/decorativos/ambientador.png"
-                        descripcion="Haz que tu auto huela increíble"
+                        key={producto.id}
+                        nombre={producto.nombre}
+                        precio={producto.precio}
+                        url={producto.imagen}
+                        descripcion="" // puedes agregar descripción si lo necesitas
                     />
                 ))}
             </div>
-
             <button className="contenedor_icon_button" onClick={scrollRight}>
                 <img src="src/assets/icons/arrow.png" alt="Flecha derecha" className="nxt-btn" />
             </button>

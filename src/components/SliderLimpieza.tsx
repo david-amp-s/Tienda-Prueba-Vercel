@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import Card from "./Card";
+import { limpieza } from "../data/products";
 
 const SliderLimpieza = () => {
     const sliderRef = useRef<HTMLDivElement>(null); 
@@ -22,15 +23,14 @@ const SliderLimpieza = () => {
                 <img src="src/assets/icons/arrow.png" alt="Flecha izquierda" className="pre-btn" />
             </button>
 
-            {/* Agregamos la ref directamente al slider */}
             <div className="slider" ref={sliderRef}>
-                {[...Array(10)].map((_, index) => (
+                {limpieza.map(producto => (
                     <Card
-                        key={index}
-                        nombre="Kit de Limpieza"
-                        precio={15000}
-                        url="src/assets/img/limpieza/kitLimpieza.jpg"
-                        descripcion="Kit de limpieza interno y externo"
+                        key={producto.id}
+                        nombre={producto.nombre}
+                        precio={producto.precio}
+                        url={producto.imagen}
+                        descripcion="" // puedes agregar descripción si lo necesitas
                     />
                 ))}
             </div>
