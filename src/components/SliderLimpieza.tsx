@@ -20,7 +20,7 @@ const SliderLimpieza = () => {
     return (
         <div className="contenedor_limpieza">
             <button className="contenedor_icon_button" onClick={scrollLeft}>
-                <img src="src/assets/icons/arrow.png" alt="Flecha izquierda" className="pre-btn" />
+                <img src="/assets/icons/arrow.png" alt="Flecha izquierda" className="pre-btn" />
             </button>
 
             <div className="slider" ref={sliderRef}>
@@ -36,7 +36,7 @@ const SliderLimpieza = () => {
             </div>
 
             <button className="contenedor_icon_button" onClick={scrollRight}>
-                <img src="src/assets/icons/arrow.png" alt="Flecha derecha" className="nxt-btn" />
+                <img src="/assets/icons/arrow.png" alt="Flecha derecha" className="nxt-btn" />
             </button>
         </div>
     );
