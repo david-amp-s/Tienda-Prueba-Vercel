@@ -22,7 +22,6 @@ export const limpieza = [
       nombre: "kit de limpieza",
       precio: 20000,
       imagen: "/assets/img/limpieza/kitLimpieza.jpg",
-
     },
     {
       id: 5,
