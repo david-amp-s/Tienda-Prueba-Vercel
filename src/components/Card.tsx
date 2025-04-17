@@ -19,6 +19,11 @@ const Card = ({ nombre, precio, url, descripcion }: CardProps) => {
     agregarProducto({ nombre, precio, url, descripcion });
   };
 
+  const handleClick = () => {
+    agregarAlCarrito();
+    window.location.reload();
+  };
+
   return (
     <div className="card-item">
       <div className="card-contenido">
@@ -26,7 +31,9 @@ const Card = ({ nombre, precio, url, descripcion }: CardProps) => {
         <h2 className="producto_nombre">{nombre}</h2>
         <p className="producto_precio">{precioFormateado}</p>
       </div>
-      <button className="bton_card buy" onClick={agregarAlCarrito}>agregar al carrito</button>
+      <button className="bton_card buy" onClick={handleClick}>
+        agregar al carrito
+      </button>
     </div>
   );
 };

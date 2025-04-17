@@ -69,7 +69,8 @@ const ModalCarrito = ({ onClose }: ModalProps) => {
                 currency: "COP"
               }).format(total)
             );
-            localStorage.clear();  
+            localStorage.clear();
+            window.location.reload();  
           }}
         >
           Pagar
